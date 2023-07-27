@@ -1,0 +1,168 @@
+-- If you want to showcase, please give credits.
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "ESUG + 1 - Galaxy", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
+local Tab = Window:MakeTab({
+	Name = "Jump",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Tab2 = Window:MakeTab({
+	Name = "Speed",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Tab3 = Window:MakeTab({
+	Name = "Health",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Tab4 = Window:MakeTab({
+	Name = "Damage",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+OrionLib:MakeNotification({
+	Name = "[Galaxy]",
+	Content = "Logged in as "..Player.Name.." ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+
+Tab:AddButton({
+	Name = "World 1 - Jump",
+	Callback = function()
+	local CFrameEnd = CFrame.new(501, 0.5, 10376) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab:AddButton({
+	Name = "World 2 - Jump",
+	Callback = function()
+	local CFrameEnd = CFrame.new(0, 5, 10462) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab:AddButton({
+	Name = "World 3 - Jump",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-497, 3, 10916) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab2:AddButton({
+	Name = "1 - Speed",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-1502, 55, 10830) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab2:AddButton({
+	Name = "2 - Speed",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-2001, 59, 12187) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab2:AddButton({
+	Name = "3 - Speed",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-2495, 80, 38673) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+
+Tab3:AddButton({
+	Name = "1 - Health",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-3499, 238, 10339) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab3:AddButton({
+	Name = "2 - Health",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-4000, 5, 10847) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab3:AddButton({
+	Name = "3 - Health",
+	Callback = function()
+	local CFrameEnd = CFrame.new(-4500, 4, 10842) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab4:AddParagraph("WARNING","You will have to manually take out your sword if it isnt out and PLEASE DO THEM IN ORDER! IT WILL TAKE LONGER UNLIKE OTHER ONES IF U GO TO 3 WHEN UR NOT SUPPOSED TO")
+Tab4:AddButton({
+	Name = "1 - Damage",
+	Callback = function()
+	local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AutoDamage"):FireServer(unpack(args))
+wait(2)
+local CFrameEnd = CFrame.new(-5500, 0, 10225) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab4:AddButton({
+	Name = "2 - Damage",
+	Callback = function()
+	local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AutoDamage"):FireServer(unpack(args))
+wait(2)
+local CFrameEnd = CFrame.new(-6000, 0, 10225) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+Tab4:AddButton({
+	Name = "3 - Damage",
+	Callback = function()
+	local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AutoDamage"):FireServer(unpack(args))
+wait(2)
+local CFrameEnd = CFrame.new(-6500, 0, 10225) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end
+})
+
+
